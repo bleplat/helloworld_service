@@ -1,0 +1,14 @@
+[Unit]
+Description=helloworld_service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=user
+ExecStart=/usr/bin/env node FULLPATH/helloworld_service.mjs
+
+[Install]
+WantedBy=multi-user.target
